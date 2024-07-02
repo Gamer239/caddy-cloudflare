@@ -18,10 +18,10 @@ jobs:
       matrix:
         include:
           - dockerfile: ./Dockerfile
-            image: ghcr.io/gamer239/caddy-cloudflare
+            image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
             tag: main
           - dockerfile: ./Dockerfile.alpine
-            image: ghcr.io/username/caddy-cloudflare
+            image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
             tag: alpine
     # Sets the permissions granted to the `GITHUB_TOKEN` for the actions in this job.
     permissions:
