@@ -19,10 +19,10 @@ jobs:
         include:
           - dockerfile: ./Dockerfile
             image: ghcr.io/gamer239/caddy-cloudflare
-            tag: main
+            tag: ghcr.io/gamer239/caddy-cloudflare:master
           - dockerfile: ./Dockerfile.alpine
             image: ghcr.io/gamer239/caddy-cloudflare
-            tag: alpine
+            tag: ghcr.io/gamer239/caddy-cloudflare:alpine
     # Sets the permissions granted to the `GITHUB_TOKEN` for the actions in this job.
     permissions:
       contents: read
